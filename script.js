@@ -17,7 +17,12 @@ function showSection(id) {
   document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
   document.getElementById(id).classList.add("active");
 }
-
+window.onload = () => {
+  showSection('splash');
+  setTimeout(() => {
+    showSection('login');
+  }, 3000); // 3 ثواني مثلاً
+};
 function login() {
   const empId = document.getElementById("employeeId").value.trim();
   if (empId === "70062") {
